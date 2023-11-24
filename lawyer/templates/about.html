@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="author_image">
+    <div class="main" data-img-url="{% static 'img/photo.jpeg' %}"></div>
+    <div class="particle_wrapper">
+        <div id="particles-js"></div>
+    </div>
+</div>
+
+<div class="main_content">
+
+    <!-- ABOUT -->
+    <div class="cavani_tm_section">
+        <div class="section_inner">
+            <div class="cavani_tm_about">
+                <div class="biography">
+                    <div class="cavani_tm_title">
+                        <span>Обо мне</span>
+                    </div>
+                    <div class="wrapper">
+                        <div class="left">
+                            <p>{{ about.text }}</p>
+                            {% comment %} <p>Помогу квалифицированно представить интересы и разобраться в непростой правовой ситуации.</p>
+                            <p>Работаю в судах общей юрисдикции, арбитраже, участвую в переговорах и в досудебное урегулировании споров. Консультирую, анализирую и предлагаю возможные варианты Вашей защиты.</p>
+                            <p>Рассказываю и поясняю Вам последствия каждого шага.</p> {% endcomment %}
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li><span class="first">Опыт работы:</span><span class="second">{{ about.work_time }}</span>
+                                    <p>{{ about.work_place }}</p></li>
+                                <li><span class="first">Номер удостоверения:</span><span class="second"><a href="{{ about.id_url }}">{{ about.id_num }}</a></span></li>
+                                <li><span class="first">Почта:</span><span class="second"><a href="Mailto:{{ profile.email }}">{{ profile.email }}</a></span></li>
+                                <li><span class="first">Телефон:</span><span class="second"><a href="Tel:{{ profile.phone }}">{{ profile.phone }}</a></span></li>
+                            </ul>
+                            <iframe src="https://yandex.ru/sprav/widget/rating-badge/155176053608?type=rating" width="150" height="50" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

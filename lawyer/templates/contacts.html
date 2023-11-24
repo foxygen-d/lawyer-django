@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="author_image">
+    <div class="main" data-img-url="{% static 'img/photo.jpeg' %}"></div>
+    <div class="particle_wrapper">
+        <div id="particles-js"></div>
+    </div>
+</div>
+
+<div class="main_content">
+
+        <!-- CONTACT -->
+        <div class="cavani_tm_section">
+            <div class="section_inner">
+                <div class="cavani_tm_contact">
+                    <div class="cavani_tm_title">
+                        <span>Контакты</span>
+                    </div>
+                    <div class="short_info">
+                        <ul>
+                            <li>
+                                <div class="list_inner">
+                                    <a href="{{ profile.href_address }}"><i class='bx bx-current-location'></i></a>
+                                    <span><a>{{ profile.address }}</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list_inner">
+                                    <a href="Mailto:{{ profile.email }}"><i class='bx bxs-envelope'></i></a>
+                                    <span><a>{{ profile.email }}</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list_inner">
+                                    <a href="Tel:{{ profile.phone }}"><i class='bx bxs-phone'></i></a>
+                                    <span><a>{{ profile.phone }}</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list_inner">
+                                    <a href="{{ profile.href_whatsapp }}"><i class='bx bxl-whatsapp'></i></a>
+                                    <span><a>Бесплатная консультация</a></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form">
+                        <div class="left">
+                            <div class="fields">
+                                <form action="/" method="post" class="contact_form" id="contact_form">
+                                    <div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+                                    <div class="empty_notice"><span>Пожалуйста, заполните все поля!</span></div>
+                                    <div class="first">
+                                        <ul>
+                                            <li>
+                                                <input id="name" type="text" placeholder="Имя" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <input id="email" type="text" placeholder="Почта" autocomplete="off">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="last">
+                                        <textarea id="message" placeholder="Сообщение"></textarea>
+                                    </div>
+                                    <div class="cavani_tm_button">
+                                        <a id="send_message" href="#">Отправить</a>
+                                    </div>
+
+                                    <!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="map_wrap">
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0e1ac15b4192a9dc344da7ec0d033015665f5ed775326145823f0923e352d6f3&amp;source=constructor" width="474" height="364" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

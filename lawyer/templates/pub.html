@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="author_image">
+    <div class="main" data-img-url="{% static 'img/photo.jpeg' %}"></div>
+    <div class="particle_wrapper">
+        <div id="particles-js"></div>
+    </div>
+</div>
+
+<div class="main_content">
+    
+    <!-- PUBLICATIONS -->
+    <div class="cavani_tm_section">
+        <div class="section_inner">
+            <div class="cavani_tm_news">
+                <div class="cavani_tm_title">
+                    <span>Публикации</span>
+                </div>
+                <div class="news_list">
+                    <ul class="relative">
+                        <li data-img="{% static 'img/news/post1.jpg' %}">
+                            <div class="list_inner">
+                                <span class="number"><img src="{% static 'img/news/post1.gif' %}" alt=""></span>
+                                <div class="details">
+                                    <div class="metabox">
+                                        <div class="info">
+                                            <span class="category"><a href="#"></a></span>
+                                            <span class="date"></span>
+                                        </div>
+                                        <div class="post_title">
+                                            <h3><a href="#">Стоимость услуг</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news_hidden_details">
+                                    <div class="news_popup_informations">
+                                        <div class="text">
+                                            <p>Защита по уголовным делам – от 50 000 руб</p>
+                                            <p>Защита прав военнослужащих и их семей – от 15 000 руб</p>
+                                            <p>Арбитражные споры – от 30 000 руб</p>
+                                            <p>Подготовка документов и представление интересов по гражданским делам – от 30 000 руб</p>
+                                            <p>Оспаривание решений и актов государственных органов – от 5 000 руб</p>
+                                            <p>Разрешение семейных и наследственных споров – от 30 000 руб</p>
+                                            <p>Защита прав потребителей – от 30 000 руб</p>
+                                            <p>Составление искового заявления – от 5 000 руб</p>
+                                            <p>Юридическая консультация – 1 500 руб</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li data-img="{% static 'img/news/post2.jpg' %}">
+                            <div class="list_inner">
+                                <span class="number"><img src="{% static 'img/news/post2.gif' %}" alt=""></span>
+                                <div class="details">
+                                    <div class="post_title">
+                                        <h3><a href="#">Юридическая консультация</a></h3>
+                                    </div>
+                                </div>
+                                <div class="news_hidden_details">
+                                    <div class="news_popup_informations">
+                                        <div class="text">
+                                            <p>Учитывая серьёзный опыт в работы в качестве личного адвоката, своим Доверителям я предоставляю пакетное-абонентское обслуживание</p>
+                                            <p>- комплексное сопровождение по всем вопросам бизнеса: правовые разъяснения корпоративного, договорного, трудового права,  разработку проекта документации, правки, экспертизу и проверку на соответствие закона и интересов. Кроме того, происходит оценка рисков по сделкам и вероятность возникновения судебных споров с последующим представлением интересов в суде. Оперативный выезд в течение 24 часов на стадии представительного следствия, суда, опросов, допросов и иных мероприятий.</p>
+                                            <p>Консультации адвоката осуществляется как лично, письменно, так и в online формате.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li data-img="{% static 'img/news/post3.jpg' %}">
+                            <div class="list_inner">
+                                <span class="number"><img src="{% static 'img/news/post3.gif' %}" alt=""></span>
+                                <div class="details">
+                                    <div class="post_title">
+                                        <h3><a href="#">Защита по уголовным делам</a></h3>
+                                    </div>
+                                </div>
+                                <div class="news_hidden_details">
+                                    <div class="news_popup_informations">
+                                        <div class="text">
+                                            <p>Защита прав граждан и юридических лиц по уголовным делам, как на стороне защиты, так и потерпевших, в том числе по делам военной службы и экономической направленности. Это круглосуточная работа, включающая:</p>
+                                            <p>Анализ материалов и выработка правовой позиции</p>
+                                            <p>Построение линии защиты и поведения доверителя</p>
+                                            <p>Сбор и предоставление доказательств</p>
+                                            <p>Подготовка жалоб и ходатайств</p>
+                                            <p>Защита доверителя на всех стадиях процесса</p>
+                                            <p>Работа с экспертными, оценочными организациями</p>
+                                            <p>Иные услуги, необходимые для защиты</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li data-img="{% static 'img/news/post4.jpg' %}">
+                            <div class="list_inner">
+                                <span class="number"><img src="{% static 'img/news/post4.gif' %}" alt=""></span>
+                                <div class="details">
+                                    <div class="post_title">
+                                        <h3><a href="#">Гражданские дела</a></h3>
+                                    </div>
+                                </div>
+                                <div class="news_hidden_details">
+                                    <div class="news_popup_informations">
+                                        <div class="text">
+                                            <p>Юридические консультации</p>
+                                            <p>Взыскание убытков и задолженностей по договорам</p>
+                                            <p>Установление фактов, имеющих юридическое значение</p>
+                                            <p>Оспаривание сделок, жилищных и трудовых споров</p>
+                                            <p>Защита чести, достоинства и деловой репутации</p>
+                                            <p>Возмещение вреда</p>
+                                            <p>Защита прав собственности</p>
+                                            <p>Споры с государственными органами</p>
+                                            <p>Ведение переговоров</p>
+                                            <p>Иные дела, связанные с гражданско-правовыми отношениями</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li data-img="{% static 'img/news/post5.jpg' %}">
+                            <div class="list_inner">
+                                <span class="number"><img src="{% static 'img/news/post5.gif' %}" alt=""></span>
+                                <div class="details">
+                                    <div class="post_title">
+                                        <h3><a href="#">Арбитражные споры</a></h3>
+                                    </div>
+                                </div>
+                                <div class="news_hidden_details">
+                                    <div class="news_popup_informations">
+                                        <div class="text">
+                                            <p>Представление интересов в Арбитражном суде</p>
+                                            <p>Досудебное урегулирование споров</p>
+                                            <p>Составление претензий, исковых заявлений</p>
+                                            <p>Сбор доказательств</p>
+                                            <p>Защита бизнеса при привлечении к уголовной и административной ответственности</p>
+                                            <p>Взыскание убытков и неосновательного обогощения</p>
+                                            <p>Споры с государственными органами</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li data-img="{% static 'img/news/post6.jpg' %}">
+                            <div class="list_inner">
+                                <span class="number"><img src="{% static 'img/news/post6.gif' %}" alt=""></span>
+                                <div class="details">
+                                    <div class="post_title">
+                                        <h3><a href="#">Защита военнослужащих</a></h3>
+                                    </div>
+                                </div>
+                                <div class="news_hidden_details">
+                                    <div class="news_popup_informations">
+                                        <div class="text">
+                                            <p>Защита по уголовным делам</p>
+                                            <p>Юридическая помощь в обеспечении жильём военнослужащих</p>
+                                            <p>Помощь при получении положенных выплат и льгот</p>
+                                            <p>Обжалование приказов об увольнении, исключении, переводе, назначении</p>
+                                            <p>Обжалование взысканий</p>
+                                            <p>Защита и юридическая помощь призывникам и мобилизованным</p>
+                                            <p>Иные вопросы прохождения военной службы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
