@@ -599,15 +599,16 @@ h6 { font-size: 16px; }
 	clear: both;
 	float: left;
 }
-.cavani_tm_button a{
+.cavani_tm_button .form_button{
 	text-decoration: none;
-	color: #fff;
+	color: white;
 	display: inline-block;
 	background-color: #333E83;
 	padding: 13px 38px;
 	border: 2px solid #333E83;
     font-family: 'Poppins', sans-serif;
 	font-weight: 500;
+	font-size: 18px;
 	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -615,7 +616,7 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.cavani_tm_button a:hover{
+.cavani_tm_button .form_button:hover{
 	background-color: transparent;
 	color: black;
 }
@@ -1251,19 +1252,20 @@ h6 { font-size: 16px; }
 	outline: none;
 } 
 .cavani_tm_contact .form .empty_notice{
-	color: #F52225;
+	color: red;
 	margin-bottom: 7px;
-	display: none;
+	display: flex;
 	text-align: left;
+	font-size: 15px;
 	font-weight: 500;
 }
 .cavani_tm_contact .form .contact_error{
-	color: #F52225;
+	color: red;
 	text-align: left;
 	font-weight: 500;
 }
 .cavani_tm_contact .form .returnmessage{
-	color:#3A00FF;
+	color:#333E83;
 	text-align: left;
 	font-weight: 500;
 }
@@ -1421,7 +1423,7 @@ h6 { font-size: 16px; }
 	.cavani_tm_home .name{font-size: 55px;margin-bottom: 25px;}
 	.cavani_tm_home .line{width: 60px;height: 4px;margin-bottom: 25px;}
 	.cavani_tm_home .job{font-size: 23px;margin-bottom: 30px;}
-	.cavani_tm_button a{padding: 13px 32px;}
+	.cavani_tm_button .form_button{padding: 13px 32px;}
 	.cavani_tm_section .section_inner{padding: 95px 50px 0px 50px;}
 	.cavani_tm_about .univ ul li .time span{padding: 3px 12px;}
 	.cavani_tm_about .univ ul li .place{padding-left: 0px;}
@@ -1476,7 +1478,7 @@ h6 { font-size: 16px; }
 	.main-text h1{margin-left: -3px;font-size: 80px;font-weight: 300;}
 	.main-text h2{font-size: 25px;font-weight: 500;}
 	.main-text h3{font-size: 40px;font-weight: 400;}
-	.cavani_tm_button a{padding: 10px 28px;}
+	.cavani_tm_button .form_button{padding: 10px 28px;}
 
 	.cavani_tm_footer{visibility: hidden;}
 	.cavani_tm_mobile_footer{visibility: visible;font-size: 12px;line-height: 15px;}

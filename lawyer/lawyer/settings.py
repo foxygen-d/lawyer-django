@@ -26,18 +26,18 @@ SECRET_KEY = 'ezgo8ofl194=e#&0+igy7^yitexknad7%zijugxcig6*71xud7'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['xxx.xxx.xxx.xxx', 'localhost', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф']
-
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main.apps.MainConfig',
     'phone_field',
 ]
 
@@ -49,20 +49,26 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'main.middleware.Custom404Middleware',
 ]
 
 ROOT_URLCONF = 'lawyer.urls'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_URL = '/static/'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.csrf',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -84,6 +90,22 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+EMAIL_HOST_USER = 'foxygen.d@gmail.com'
+EMAIL_HOST_PASSWORD = 'atqapckqwpdwshxz'
+
+# EMAIL_HOST_USER = 'nastya_sky_2000@mail.ru'
+# EMAIL_HOST_PASSWORD = 'hCNwihfMK2tLukVxjUUh'
+
+# EMAIL_HOST_USER = 'foxygen.d@yandex.ru'
+# EMAIL_HOST_PASSWORD = 'dirgrmtmdyksbnur'
 
 
 # Password validation
@@ -110,6 +132,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = [
+    ('ru', ('Russian')),
+    ('en', ('English')),
+]
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -122,4 +149,3 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'

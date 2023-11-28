@@ -427,51 +427,6 @@ function cavani_tm_data_images(){
 	});
 }
 
-// -----------------------------------------------------
-// ----------------    CONTACT FORM    -----------------
-// -----------------------------------------------------
-
-function cavani_tm_contact_form(){
-	
-	"use strict";
-	
-	jQuery(".contact_form #send_message").on('click', function(){
-		
-		var name 		= jQuery(".contact_form #name").val();
-		var email 		= jQuery(".contact_form #email").val();
-		var message 	= jQuery(".contact_form #message").val();
-		var subject 	= jQuery(".contact_form #subject").val();
-		var success     = jQuery(".contact_form .returnmessage").data('success');
-	
-		jQuery(".contact_form .returnmessage").empty(); //To empty previous error/success message.
-		//checking for blank fields	
-		if(name===''||email===''||message===''){
-			
-			jQuery('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
-		}
-		else{
-			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contact.php",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
-				
-				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
-				
-				
-				if(jQuery(".contact_form .returnmessage span.contact_error").length){
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);		
-				}else{
-					jQuery(".contact_form .returnmessage").append("<span class='contact_success'>"+ success +"</span>");
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
-				}
-				
-				if(data===""){
-					jQuery("#contact_form")[0].reset();//To reset form fields on success
-				}
-				
-			});
-		}
-		return false; 
-	});
-}
 
 // -----------------------------------------------------
 // --------------    OWL CAROUSEL    -------------------
@@ -537,21 +492,6 @@ function currentLink(ccc,e){
 	
 }
 
-// -------------------------------------------------
-// -------------  GLITCH  --------------------------
-// -------------------------------------------------
-
-$(".glitch").mgGlitch({
-	destroy: false,
-	glitch: true,
-	scale: true,
-	blend: true,
-	blendModeType: "hue",
-	glitch1TimeMin: 200,
-	glitch1TimeMax: 400,
-	glitch2TimeMin: 10,
-	glitch2TimeMax: 100
-});
 
 // -------------------------------------------------
 // -------------  RIPPLE  --------------------------
@@ -574,7 +514,7 @@ function cavani_tm_ripple(){
 function cavani_tm_modalbox(){"use strict";jQuery(".cavani_tm_all_wrap").prepend('<div class="cavani_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>')}
 function cavani_tm_news_popup(){"use strict";var e=jQuery(".cavani_tm_modalbox"),a=jQuery(".cavani_tm_news .news_list > ul > li .post_title h3 a"),i=e.find(".close");a.on("click",(function(){var a=jQuery(this).closest("li"),i=a.find(".news_hidden_details").html(),t=a.data("img"),n=a.find(".extra_metas").html(),r=a.find(".post_title a").text();return e.addClass("opened"),e.find(".description_wrap").html(i),e.find(".news_popup_informations").prepend('<div class="image"><img src="assets/img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+t+'"></div></div>'),e.find(".news_popup_informations .image").after('<div class="details"><div class="meta">'+n+'</div><div class="title"><h3>'+r+"</h3></div><div>"),cavani_tm_data_images(),!1})),i.on("click",(function(){return e.removeClass("opened"),e.find(".description_wrap").html(""),!1}))}
 function cavani_tm_service_popup(){"use strict";var e=jQuery(".cavani_tm_modalbox"),a=jQuery(".cavani_tm_service .service_list ul li .cavani_tm_full_link"),i=e.find(".close");a.on("click",(function(){var a=jQuery(this).closest(".list_inner"),i=a.find(".popup_service_image").attr("src"),t=a.find(".title").html(),n=a.find(".service_hidden_details").html();return e.addClass("opened"),e.find(".description_wrap").html(n),e.find(".service_popup_informations").prepend('<div class="image"><img src="assets/img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+i+'"></div></div>'),cavani_tm_data_images(),e.find(".service_popup_informations .image").after('<div class="main_title"><h3>'+t+"</h3></div>"),!1})),i.on("click",(function(){return e.removeClass("opened"),e.find(".description_wrap").html(""),!1}))}
-function cavani_tm_data_images(){"use strict";jQuery("*[data-img-url]").each((function(){var e=jQuery(this),a=e.data("img-url");e.css({backgroundImage:"url("+a+")"})}))}function cavani_tm_contact_form(){"use strict";jQuery(".contact_form #send_message").on("click",(function(){var e=jQuery(".contact_form #name").val(),a=jQuery(".contact_form #email").val(),i=jQuery(".contact_form #message").val(),t=jQuery(".contact_form #subject").val(),n=jQuery(".contact_form .returnmessage").data("success");return jQuery(".contact_form .returnmessage").empty(),""===e||""===a||""===i?jQuery("div.empty_notice").slideDown(500).delay(2e3).slideUp(500):jQuery.post("modal/contact.php",{ajax_name:e,ajax_email:a,ajax_message:i,ajax_subject:t},(function(e){jQuery(".contact_form .returnmessage").append(e),jQuery(".contact_form .returnmessage span.contact_error").length?jQuery(".contact_form .returnmessage").slideDown(500).delay(2e3).slideUp(500):(jQuery(".contact_form .returnmessage").append("<span class='contact_success'>"+n+"</span>"),jQuery(".contact_form .returnmessage").slideDown(500).delay(4e3).slideUp(500)),""===e&&jQuery("#contact_form")[0].reset()})),!1}))}
+function cavani_tm_data_images(){"use strict";jQuery("*[data-img-url]").each((function(){var e=jQuery(this),a=e.data("img-url");e.css({backgroundImage:"url("+a+")"})}))}
 
 function cavani_tm_moving_box(){
 	
@@ -583,4 +523,4 @@ function cavani_tm_moving_box(){
 	var e=$(".cavani_tm_news").find(".news_list > ul > li");
 	$(".cavani_fn_moving_box").length||$("body").append('<div class="cavani_fn_moving_box"></div>');
 	var a=$(".cavani_fn_moving_box");
-	e.on("mouseenter",(function(){var e=$(this),i=e.data("img"),t=e.offset().top;if(""===i)return a.removeClass("opened"),!1;a.addClass("opened"),a.css({backgroundImage:"url("+i+")",top:t+"px"})})).on("mouseleave",(function(){a.removeClass("opened")}))}jQuery(document).ready((function(){"use strict";cavani_tm_modalbox(),cavani_tm_page_transition(),cavani_tm_my_progress(),cavani_tm_circular_progress(),cavani_tm_portfolio_popup(),cavani_tm_news_popup(),cavani_tm_service_popup(),cavani_tm_cursor(),cavani_tm_imgtosvg(),cavani_tm_popup(),cavani_tm_portfolio(),cavani_tm_data_images(),cavani_tm_contact_form(),cavani_tm_mycarousel(),hashtag(),cavani_tm_ripple(),cavani_tm_moving_box(),jQuery(window).load("body",(function(){cavani_tm_my_load()}))})),$(".glitch").mgGlitch({destroy:!1,glitch:!0,scale:!0,blend:!0,blendModeType:"hue",glitch1TimeMin:200,glitch1TimeMax:400,glitch2TimeMin:10,glitch2TimeMax:100});
+	e.on("mouseenter",(function(){var e=$(this),i=e.data("img"),t=e.offset().top;if(""===i)return a.removeClass("opened"),!1;a.addClass("opened"),a.css({backgroundImage:"url("+i+")",top:t+"px"})})).on("mouseleave",(function(){a.removeClass("opened")}))}jQuery(document).ready((function(){"use strict";cavani_tm_modalbox(),cavani_tm_page_transition(),cavani_tm_my_progress(),cavani_tm_circular_progress(),cavani_tm_portfolio_popup(),cavani_tm_news_popup(),cavani_tm_service_popup(),cavani_tm_cursor(),cavani_tm_imgtosvg(),cavani_tm_popup(),cavani_tm_portfolio(),cavani_tm_data_images(),cavani_tm_mycarousel(),hashtag(),cavani_tm_ripple(),cavani_tm_moving_box(),jQuery(window).load("body",(function(){cavani_tm_my_load()}))})),$(".glitch").mgGlitch({destroy:!1,glitch:!0,scale:!0,blend:!0,blendModeType:"hue",glitch1TimeMin:200,glitch1TimeMax:400,glitch2TimeMin:10,glitch2TimeMax:100});

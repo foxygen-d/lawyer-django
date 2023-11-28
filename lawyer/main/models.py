@@ -25,12 +25,10 @@ class Profile(models.Model):
         help_text='Введите email',
     )
     address = models.TextField(
-        default='',
         verbose_name='Адрес',
         help_text='Введите Адрес',
     )
     href_address = models.TextField(
-        default='',
         verbose_name='Ссылка на адрес',
         help_text='Введите ссылку на адрес',
     )
@@ -76,15 +74,25 @@ class About(models.Model):
 
 
 class Publications(models.Model):
-    title = models.TextField()
-    description = models.TextField()
+    title = models.TextField(
+        verbose_name='Заголовок',
+        help_text='Введите заголовок',
+    )
+    image = models.ImageField(
+        verbose_name='Картинка',
+        help_text='Добавьте картинку',
+        upload_to='images/',
+    )
+    gif = models.ImageField(
+        verbose_name='GIF к посту',
+        help_text='Добавьте GIF к посту',
+        upload_to='gif/',
+    )
+    description = models.TextField(
+        verbose_name='Текст публикации',
+        help_text='Введите текст публикации',
+    )
 
     class Meta:
         verbose_name = 'Публикации'
         verbose_name_plural = 'Публикации'
-
-
-# class Ask(models.Model):
-#     name = models.TextField()
-#     email = models.EmailField()
-#     text = models.TextField()

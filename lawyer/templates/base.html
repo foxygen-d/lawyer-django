@@ -63,7 +63,7 @@
 					<li><a href="{% url 'lawyer:main' %}">Главная</a></li>
 					<li><a href="{% url 'lawyer:about' %}">Обо мне</a></li>
 					<li><a href="{% url 'lawyer:pub' %}">Публикации</a></li>
-					<li><a href="{% url 'lawyer:contact' %}">Контакты</a></li>
+					<li><a href="{% url 'lawyer:contacts' %}">Контакты</a></li>
 				</ul>
 			</div>
 		</div>
@@ -95,15 +95,15 @@
 							<li><a href="{% url 'lawyer:main' %}">Главная</a></li>
 							<li><a href="{% url 'lawyer:about' %}">Обо мне</a></li>
 							<li><a href="{% url 'lawyer:pub' %}">Публикации</a></li>
-							<li><a href="{% url 'lawyer:contact' %}">Контакты</a></li>
+							<li><a href="{% url 'lawyer:contacts' %}">Контакты</a></li>
 						</ul>
 					</div>
 					<div class="social">
 						<ul>
-							<li><a href="Tel:8-911-866-99-26"><i class='bx bx-phone'></i></a></li>
-							<li><a href="Mailto:vasilev.ka@yandex.ru"><i class='bx bx-envelope'></i></a></li>
-							<li><a href="https://api.whatsapp.com/send/?phone=79118669926&text&type=phone_number&app_absent=0"><i class='bx bxl-whatsapp'></i></a></li>
-							<li><a href="https://vk.com/id26187114"><i class='bx bxl-vk'></i></a></li>
+							<li><a href="Tel:{{ profile.phone }}"><i class='bx bx-phone'></i></a></li>
+							<li><a href="Mailto:{{ profile.email }}"><i class='bx bx-envelope'></i></a></li>
+							<li><a href="{{ profile.href_whatsapp }}"><i class='bx bxl-whatsapp'></i></a></li>
+							<li><a href="{{ profile.href_vk }}"><i class='bx bxl-vk'></i></a></li>
 						</ul>
 					</div>
 				</div>
