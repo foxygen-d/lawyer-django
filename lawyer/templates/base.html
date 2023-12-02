@@ -14,7 +14,7 @@
 
 	<title>Услуги адвоката</title>
 	<!--favicon-img--> 
-	<link rel="icon" type="image/png" href="{% static 'img/logo/z-black.jpeg' %}">
+	<link rel="icon" type="image/png" href="{% static 'img/z-black.jpeg' %}">
 
 	<!--boxicons link-->
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -56,7 +56,7 @@
 		<!-- HEADER -->
 		<div class="cavani_tm_header">
 			<div class="logo">
-				<a href="https://zanozamedia.ideait.ru/"><img src="{% static 'img/logo/z-black.jpeg' %}" alt="Logo Zanoza Production" /></a>
+				<a href="https://zanozamedia.ideait.ru/"><img src="{% static 'img/z-black.jpeg' %}" alt="Logo Zanoza Production" title="Zanoza Production"/></a>
 			</div>
 			<div class="menu">
 				<ul class="transition_link">
@@ -73,7 +73,7 @@
 		<div class="cavani_tm_topbar">
 			<div class="topbar_inner">
 				<div class="logo">
-					<a href="https://zanozamedia.ideait.ru/"><img src="{% static 'img/logo/z-black.jpeg' %}" alt="Logo Zanoza Production" /></a>
+					<a href="https://zanozamedia.ideait.ru/"><img src="{% static 'img/z-black.jpeg' %}" alt="Logo Zanoza Production" title="Zanoza Production"/></a>
 				</div>
 				<div class="trigger">
 					<div class="hamburger hamburger--squeeze">
@@ -88,7 +88,7 @@
 			<div class="inner">
 				<div class="wrapper">
 					<div class="avatar">
-						<div class="image" data-img-url="{% static 'img/photo.jpeg' %}"></div>
+						<div class="image" data-img="{{ profile.photo.url }}" alt="Личное фото" title="Личное фото"></div>
 					</div>
 					<div class="menu_list">
 						<ul class="transition_link">
@@ -102,8 +102,8 @@
 						<ul>
 							<li><a href="Tel:{{ profile.phone }}"><i class='bx bx-phone'></i></a></li>
 							<li><a href="Mailto:{{ profile.email }}"><i class='bx bx-envelope'></i></a></li>
-							<li><a href="{{ profile.href_whatsapp }}"><i class='bx bxl-whatsapp'></i></a></li>
-							<li><a href="{{ profile.href_vk }}"><i class='bx bxl-vk'></i></a></li>
+							<li><a href="{{ profile.url_whatsapp }}"><i class='bx bxl-whatsapp'></i></a></li>
+							<li><a href="{{ profile.url_vk }}"><i class='bx bxl-vk'></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -114,7 +114,7 @@
 		<!-- MAINPART -->
 		<div class="cavani_tm_mainpart">
 			{% block content %}
-			Контент не подвезли
+				Контент не подвезли
 			{% endblock %}
 		</div>
 		<!-- /MAINPART -->

@@ -25,12 +25,12 @@ SECRET_KEY = 'ezgo8ofl194=e#&0+igy7^yitexknad7%zijugxcig6*71xud7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['xxx.xxx.xxx.xxx', 'localhost', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф']
-ALLOWED_HOSTS = ['127.0.0.1']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'phone_field',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -92,7 +93,6 @@ DATABASES = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -100,12 +100,6 @@ EMAIL_USE_SSL = False
 
 EMAIL_HOST_USER = 'foxygen.d@gmail.com'
 EMAIL_HOST_PASSWORD = 'atqapckqwpdwshxz'
-
-# EMAIL_HOST_USER = 'nastya_sky_2000@mail.ru'
-# EMAIL_HOST_PASSWORD = 'hCNwihfMK2tLukVxjUUh'
-
-# EMAIL_HOST_USER = 'foxygen.d@yandex.ru'
-# EMAIL_HOST_PASSWORD = 'dirgrmtmdyksbnur'
 
 
 # Password validation

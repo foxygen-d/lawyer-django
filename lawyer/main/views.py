@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 
 from .forms import AskForm
-from .models import Profile, About, Publications
+from .models import Profile, About, Publications, VideoAbout
 from lawyer.settings import EMAIL_HOST_USER
 
 
@@ -19,10 +19,12 @@ def index(request):
 def about(request):
     profile = get_object_or_404(Profile)
     about_info = get_object_or_404(About)
+    video = VideoAbout.objects.all()
     context = {
         'profile': profile,
         'about': about_info,
-        'text': about_info.text.split('.'),
+        'text': about_info.text.split(';'),
+        'videos': video,
     }
     return render(request, 'about.html', context)
 
@@ -42,8 +44,9 @@ def publications(request):
 
 
 def contacts(request):
+    profile = get_object_or_404(Profile)
     context = {
-        'profile': get_object_or_404(Profile),
+        'profile': profile,
     }
     if request.method == 'POST':
         form = AskForm(request.POST)
@@ -52,6 +55,7 @@ def contacts(request):
                 form.cleaned_data['name'],
                 form.cleaned_data['email'],
                 form.cleaned_data['message'],
+                profile.email,
                 )
             context['success'] = 1
     else:
@@ -61,7 +65,7 @@ def contacts(request):
     return render(request, 'contacts.html', context)
 
 
-def send_message(name, email, message):
+def send_message(name, email, message, email_to):
     text = get_template('message.html')
     context = {
         'name': name,
@@ -71,7 +75,7 @@ def send_message(name, email, message):
     subject = 'Сообщение с сайта'
     text_content = text.render(context)
 
-    send_mail(subject, text_content, EMAIL_HOST_USER, [EMAIL_HOST_USER])
+    send_mail(subject, text_content, EMAIL_HOST_USER, [email_to])
 
 
 def page_not_found(request, exception):

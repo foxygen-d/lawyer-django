@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="author_image">
-    <div class="main" data-img-url="{% static 'img/photo.jpeg' %}"></div>
+    <div class="main" data-img-url="{{ profile.photo.url }}" alt="Личное фото" title="Личное фото"></div>
     <div class="particle_wrapper">
         <div id="particles-js"></div>
     </div>
@@ -36,6 +36,12 @@
                             </ul>
                             <iframe src="https://yandex.ru/sprav/widget/rating-badge/155176053608?type=rating" width="150" height="50" frameborder="0"></iframe>
                         </div>
+                    </div>
+                    <p class="video_text">СМИ о нас</p>
+                    <div class="video_wrapper">
+                        {% for elem in videos %}
+                            <video class="item" src="{{ elem.video.url }}" controls></video>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

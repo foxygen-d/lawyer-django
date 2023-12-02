@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="author_image">
-    <div class="main" data-img-url="{% static 'img/photo.jpeg' %}"></div>
+    <div class="main" data-img-url="{{ profile.photo.url }}" alt="Личное фото" title="Личное фото"></div>
     <div class="particle_wrapper">
         <div id="particles-js"></div>
     </div>
@@ -23,7 +23,7 @@
                         <ul>
                             <li>
                                 <div class="list_inner">
-                                    <a href="{{ profile.href_address }}"><i class='bx bx-current-location'></i></a>
+                                    <a href="{{ profile.url_address }}"><i class='bx bx-current-location'></i></a>
                                     <span><a>{{ profile.address }}</a></span>
                                 </div>
                             </li>
@@ -41,7 +41,7 @@
                             </li>
                             <li>
                                 <div class="list_inner">
-                                    <a href="{{ profile.href_whatsapp }}"><i class='bx bxl-whatsapp'></i></a>
+                                    <a href="{{ profile.url_whatsapp }}"><i class='bx bxl-whatsapp'></i></a>
                                     <span><a>Бесплатная консультация</a></span>
                                 </div>
                             </li>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="right">
                             <div class="map_wrap">
-                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0e1ac15b4192a9dc344da7ec0d033015665f5ed775326145823f0923e352d6f3&amp;source=constructor" width="474" height="364" frameborder="0"></iframe>
+                                <iframe src="{{ profile.map }}" width="474" height="364" frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>
