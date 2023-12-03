@@ -25,7 +25,7 @@ SECRET_KEY = 'ezgo8ofl194=e#&0+igy7^yitexknad7%zijugxcig6*71xud7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф']
+ALLOWED_HOSTS = ['51.250.99.240', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф']
 
 # Application definition
 
