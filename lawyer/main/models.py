@@ -46,8 +46,8 @@ class Profile(models.Model):
         help_text='Введите ссылку на VK',
     )
     map = models.URLField(
-        verbose_name='Код карты',
-        help_text='Введите код карты',
+        verbose_name='Ссылка на карту',
+        help_text='Введите ссылку на карту',
     )
 
     class Meta:
