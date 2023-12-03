@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
-from phone_field import PhoneField
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 User = get_user_model()
@@ -16,7 +16,7 @@ class Profile(models.Model):
         verbose_name='Фамилия',
         help_text='Введите Фамилию',
     )
-    phone = PhoneField(
+    phone = PhoneNumberField(
         verbose_name='Телефон',
         help_text='Введите номер телефона'
     )
