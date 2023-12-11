@@ -25,7 +25,7 @@ SECRET_KEY = 'ezgo8ofl194=e#&0+igy7^yitexknad7%zijugxcig6*71xud7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф']
+ALLOWED_HOSTS = ['195.24.68.20', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф', 'adv5127295.nichost.ru', 'www.advokatvasilev.ru']
 
 # Application definition
 
@@ -98,8 +98,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-EMAIL_HOST_USER = 'foxygen.d@gmail.com'
-EMAIL_HOST_PASSWORD = 'atqapckqwpdwshxz'
+EMAIL_HOST_USER = 'vasilev.ka83@gmail.com'
+EMAIL_HOST_PASSWORD = 'hqvgvloqjlevltaj'
 
 
 # Password validation

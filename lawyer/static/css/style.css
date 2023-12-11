@@ -341,7 +341,7 @@ h6 { font-size: 16px; }
 .cavani_tm_topbar .hamburger-inner:after, 
 .cavani_tm_topbar .hamburger-inner:before{
 	width: 30px;
-	height: 2px;
+	height: 1px;
 }
 .cavani_tm_topbar .trigger{
 	position: relative;
@@ -415,7 +415,7 @@ h6 { font-size: 16px; }
 .cavani_tm_mobile_menu .social{
 	width: 100%;
 	float: left;
-	margin-top: 350px;
+	/* margin-top: 150px; */
 }
 .cavani_tm_mobile_menu .social ul{
 	margin: 0px;
@@ -534,6 +534,17 @@ h6 { font-size: 16px; }
 /*---------------------------------------------------*/
 /*	05) CAVANI HOME
 /*---------------------------------------------------*/
+.cavani_tm_home{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.cavani_tm_home .content{
+	padding-left: 100px;
+}
+
 /* MAIN PAGE */
 .main{
     height: 100%;
@@ -546,7 +557,9 @@ h6 { font-size: 16px; }
 	padding: 0 18%;
 }
 .main-text h1{
-    font-size: 150px;
+    font-size: clamp(70px, 15vw, 150px);
+	margin-left: -4px;
+	margin-bottom: 20px;
     font-weight: 400;
     line-height: 1;
     color: #333E83;
@@ -558,7 +571,7 @@ h6 { font-size: 16px; }
     margin-bottom: 40px;
 }
 .main-text h3{
-    font-size: 64px;
+    font-size: clamp(40px, 5vw, 64px);
     font-weight: 400;
     color: #333E83;
 }
@@ -663,7 +676,7 @@ h6 { font-size: 16px; }
     font-family: 'Poppins', sans-serif;
 	color: #333E83;
 	text-transform: uppercase;
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: 700;
 	letter-spacing: 8px;
 }
@@ -1440,9 +1453,6 @@ h6 { font-size: 16px; }
 	.cavani_tm_mainpart{top: 60px;left: 60px;right: 60px;bottom: 60px;}
 	.cavani_tm_header .menu ul li a{padding: 0px 22px;}
 	.cavani_tm_home .content{padding-left: 50px;}
-	.cavani_tm_home .name{font-size: 55px;margin-bottom: 25px;}
-	.cavani_tm_home .line{width: 60px;height: 4px;margin-bottom: 25px;}
-	.cavani_tm_home .job{font-size: 23px;margin-bottom: 30px;}
 	.cavani_tm_button .form_button{padding: 13px 32px;}
 	.cavani_tm_section .section_inner{padding: 95px 50px 0px 50px;}
 	.cavani_tm_about .univ ul li .time span{padding: 3px 12px;}
@@ -1455,6 +1465,11 @@ h6 { font-size: 16px; }
 	.cavani_tm_modalbox .box_inner{width: 750px;}
 	.cavani_tm_modalbox .description_wrap{padding: 30px;}
 	.cavani_tm_modalbox .close .svg{width: 40px;height: 40px;}
+}
+@media (max-width: 1230px) {
+	.main-text h1{margin-left: -4px;margin-bottom: 30px;font-size: 120px;}
+	.main-text h2{font-size: 50px}
+	.icons i{font-size: 50px;}
 }
 @media (max-width: 1040px) {
 	.mouse-cursor{display: none;}
@@ -1470,8 +1485,6 @@ h6 { font-size: 16px; }
 	.cavani_tm_mainpart{top: 55px;left: 0px;right: 0px;bottom: 0px;}
 	.cavani_tm_mainpart .main_content{width: 100%;}
 	.cavani_tm_home .content{padding: 0px 20px;}
-	.cavani_tm_home .name{font-size: 60px;}
-	.cavani_tm_home .job{font-size: 22px;}
 	.cavani_tm_about .biography .wrapper{flex-direction: column;align-items: baseline;}
 	.cavani_tm_about .biography .left{width: 100%;margin-bottom: 55px;}
 	.cavani_tm_about .biography .right{width: 100%;}
@@ -1495,10 +1508,11 @@ h6 { font-size: 16px; }
 	.cavani_tm_modalbox .news_popup_informations .details h3{font-size: 20px;}
 }
 @media (max-width: 768px) {
+	.main{height: 80%;}
 	.main-text{margin-left: -40px;}
-	.main-text h1{margin-left: -3px;font-size: 80px;font-weight: 300;}
-	.main-text h2{font-size: 25px;font-weight: 500;}
-	.main-text h3{font-size: 40px;font-weight: 400;}
+	.main-text h1{margin-left: -3px;font-weight: 300;font-size: 70px;}
+	.main-text h2{margin-top: 15px;font-size: 24px;font-weight: 500;}
+	.main-text h3{font-weight: 400;}
 	.cavani_tm_button .form_button{padding: 10px 28px;}
 
 	.cavani_tm_footer{visibility: hidden;}
@@ -1509,7 +1523,7 @@ h6 { font-size: 16px; }
 	.cavani_tm_news .news_list ul{margin: 0px;}
 	.cavani_tm_news .news_list ul li{width: 100%;padding-left: 0px;}
 	.cavani_tm_news .news_list ul li .details{padding: 15px 20px 0px 20px;}
-	.cavani_tm_title span{letter-spacing: 4px;}
+	.cavani_tm_title span{letter-spacing: 4px;font-weight: 400;}
 	.cavani_tm_title span:after{margin-left: 15px;}
 	.cavani_tm_modalbox .box_inner{width: 300px;top: 100px;bottom: 40px;}
 	.cavani_tm_modalbox .close{margin-left: -25px;top: -35px;}
