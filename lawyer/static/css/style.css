@@ -412,27 +412,6 @@ h6 { font-size: 16px; }
 	text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
 }
-.cavani_tm_mobile_menu .social{
-	width: 100%;
-	float: left;
-	/* margin-top: 150px; */
-}
-.cavani_tm_mobile_menu .social ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.cavani_tm_mobile_menu .social ul li{
-	margin: 0px 8px 0px 0px;
-	display: inline-block;
-}
-.cavani_tm_mobile_menu .social ul li:last-child{
-	margin-right: 0px;
-}
-.cavani_tm_mobile_menu .social ul li a{
-	text-decoration: none;
-	color: white;
-	font-size: 25px;
-}
 
 
 /*---------------------------------------------------*/
@@ -756,6 +735,7 @@ h6 { font-size: 16px; }
 	font-weight: 700;
 }
 .video_wrapper{
+	margin-top: 10px;
 	max-height: 220px;
 	border: 1px solid white;
 	display: flex;

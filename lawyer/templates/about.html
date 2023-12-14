@@ -40,7 +40,7 @@
                     <p class="video_text">СМИ о нас</p>
                     <div class="video_wrapper">
                         {% for elem in videos %}
-                            <video class="item" src="{{ elem.video.url }}" controls></video>
+                            <video class="item" controls="controls" poster="{% static 'post1.gif' %}" src="{{ elem.video.url }}"></video>
                         {% endfor %}
                         <div class="item"></div>
                         <div class="item"></div>

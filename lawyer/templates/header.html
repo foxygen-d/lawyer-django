@@ -1,0 +1,51 @@
+{% load static %}
+
+<!-- HEADER -->
+<div class="cavani_tm_header">
+    <div class="logo">
+        <a href="https://zanozamedia.ideait.ru/"><img src="{% static 'img/z-black.jpeg' %}" alt="Logo Zanoza Production" title="Zanoza Production"/></a>
+    </div>
+    <div class="menu">
+        <ul class="transition_link">
+            <li><a href="{% url 'lawyer:main' %}">Главная</a></li>
+            <li><a href="{% url 'lawyer:about' %}">Обо мне</a></li>
+            <li><a href="{% url 'lawyer:pub' %}">Публикации</a></li>
+            <li><a href="{% url 'lawyer:contacts' %}">Контакты</a></li>
+        </ul>
+    </div>
+</div>
+<!-- /HEADER -->
+
+<!-- MOBILE MENU -->
+<div class="cavani_tm_topbar">
+    <div class="topbar_inner">
+        <div class="logo">
+            <a href="https://zanozamedia.ideait.ru/"><img src="{% static 'img/z-black.jpeg' %}" alt="Logo Zanoza Production" title="Zanoza Production"/></a>
+        </div>
+        <div class="trigger">
+            <div class="hamburger hamburger--squeeze">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cavani_tm_mobile_menu">
+    <div class="inner">
+        <div class="wrapper">
+            <div class="avatar">
+                <div class="image" data-img-url="{{ profile.photo.url }}" alt="Личное фото" title="Личное фото"></div>
+            </div>
+            <div class="menu_list">
+                <ul class="transition_link">
+                    <li><a href="{% url 'lawyer:main' %}">Главная</a></li>
+                    <li><a href="{% url 'lawyer:about' %}">Обо мне</a></li>
+                    <li><a href="{% url 'lawyer:pub' %}">Публикации</a></li>
+                    <li><a href="{% url 'lawyer:contacts' %}">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MOBILE MENU -->

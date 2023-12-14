@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ezgo8ofl194=e#&0+igy7^yitexknad7%zijugxcig6*71xud7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['195.24.68.20', 'advokatvasilev.ru', 'васильевадвокат.рф', 'адвокатвасильев.рф', 'adv5127295.nichost.ru', 'www.advokatvasilev.ru']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -56,11 +56,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'lawyer.urls'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_URL = '/static/'
-
-MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 
 TEMPLATES = [
     {
@@ -138,8 +138,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
-
