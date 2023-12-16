@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- 404 -->
+<section class="main">
+    <div class="main-text">
+        <h1>Ошибка 500</h1>
+        <h2>Не удалось отправить форму</h2>
+        <h3>Перейти на <a href="{% url 'lawyer:main' %}">Главную</a></h3>
+    </div>
+</section>
+
+{% endblock %}

@@ -813,12 +813,10 @@ h6 { font-size: 16px; }
 	clear: both;
 	float: left;
 }
-
 .cavani_tm_news .news_list ul {
 	position: relative;
 	z-index: 2;
 }
-
 .cavani_tm_news .news_list li {
 	width: 100%;
 	padding-top: 29px;
@@ -826,7 +824,6 @@ h6 { font-size: 16px; }
 	padding-left: 0;
 	list-style-type: none;
 }
-
 .cavani_tm_news .list_inner {
 	width: 100%;
 	clear: both;
@@ -888,7 +885,6 @@ h6 { font-size: 16px; }
 .cavani_tm_news .text p {
 	margin-bottom: 15px;
 }
-
 
 .news_list .details:before {
 	position: absolute;
@@ -1318,6 +1314,7 @@ h6 { font-size: 16px; }
 	color: #333;
     font-family: 'Poppins', sans-serif;
 	font-size: 15px;
+	text-align: center;
 }
 .cavani_tm_mobile_footer{
 	position: fixed;
@@ -1508,4 +1505,6 @@ h6 { font-size: 16px; }
 	.cavani_tm_modalbox .box_inner{width: 300px;top: 100px;bottom: 40px;}
 	.cavani_tm_modalbox .close{margin-left: -25px;top: -35px;}
 	.cavani_tm_modalbox .close .svg{width: 25px;height: 25px;}
+
+	.cavani_fn_moving_box.opened{visibility: hidden;}
 }

@@ -88,6 +88,11 @@ class VideoAbout(models.Model):
         help_text='Добавьте видео',
         upload_to='videos/',
     )
+    photo_to_video = models.ImageField(
+        verbose_name='Фото к видео',
+        help_text='Добавьте фото к видео',
+        upload_to='images/',
+    )
 
     class Meta:
         verbose_name = 'Видео'

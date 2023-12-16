@@ -1,10 +1,3 @@
-/*
- * Copyright (c) 2021 Marketify
- * Author: Marketify
- * This file is made for CURRENT TEMPLATE
-*/
-
-
 jQuery(document).ready(function(){
 
 	"use strict";
@@ -202,6 +195,7 @@ function cavani_tm_portfolio_popup(){
 	});
 }
 
+
 // -------------------------------------------------
 // ----------------  NEWS POPUP  -------------------
 // -------------------------------------------------
@@ -236,8 +230,6 @@ function cavani_tm_news_popup(){
 }
 
 
-
-
 // -----------------------------------------------------
 // ---------------   PRELOADER   -----------------------
 // -----------------------------------------------------
@@ -261,6 +253,7 @@ function cavani_tm_preloader(){
 		preloader.remove();
 	}
 }
+
 
 // -----------------------------------------------------
 // -----------------   MY LOAD    ----------------------
@@ -511,16 +504,92 @@ function cavani_tm_ripple(){
 
 
 
-function cavani_tm_modalbox(){"use strict";jQuery(".cavani_tm_all_wrap").prepend('<div class="cavani_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>')}
-function cavani_tm_news_popup(){"use strict";var e=jQuery(".cavani_tm_modalbox"),a=jQuery(".cavani_tm_news .news_list > ul > li .post_title h3 a"),i=e.find(".close");a.on("click",(function(){var a=jQuery(this).closest("li"),i=a.find(".news_hidden_details").html(),t=a.data("img"),n=a.find(".extra_metas").html(),r=a.find(".post_title a").text();return e.addClass("opened"),e.find(".description_wrap").html(i),e.find(".news_popup_informations").prepend('<div class="image"><img src="assets/img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+t+'"></div></div>'),e.find(".news_popup_informations .image").after('<div class="details"><div class="meta">'+n+'</div><div class="title"><h3>'+r+"</h3></div><div>"),cavani_tm_data_images(),!1})),i.on("click",(function(){return e.removeClass("opened"),e.find(".description_wrap").html(""),!1}))}
-function cavani_tm_service_popup(){"use strict";var e=jQuery(".cavani_tm_modalbox"),a=jQuery(".cavani_tm_service .service_list ul li .cavani_tm_full_link"),i=e.find(".close");a.on("click",(function(){var a=jQuery(this).closest(".list_inner"),i=a.find(".popup_service_image").attr("src"),t=a.find(".title").html(),n=a.find(".service_hidden_details").html();return e.addClass("opened"),e.find(".description_wrap").html(n),e.find(".service_popup_informations").prepend('<div class="image"><img src="assets/img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+i+'"></div></div>'),cavani_tm_data_images(),e.find(".service_popup_informations .image").after('<div class="main_title"><h3>'+t+"</h3></div>"),!1})),i.on("click",(function(){return e.removeClass("opened"),e.find(".description_wrap").html(""),!1}))}
-function cavani_tm_data_images(){"use strict";jQuery("*[data-img-url]").each((function(){var e=jQuery(this),a=e.data("img-url");e.css({backgroundImage:"url("+a+")"})}))}
+function cavani_tm_modalbox() {
+    "use strict";
+    jQuery(".cavani_tm_all_wrap").prepend('<div class="cavani_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>')
+}
 
-function cavani_tm_moving_box(){
-	
-	"use strict";
-	
-	var e=$(".cavani_tm_news").find(".news_list > ul > li");
-	$(".cavani_fn_moving_box").length||$("body").append('<div class="cavani_fn_moving_box"></div>');
-	var a=$(".cavani_fn_moving_box");
-	e.on("mouseenter",(function(){var e=$(this),i=e.data("img"),t=e.offset().top;if(""===i)return a.removeClass("opened"),!1;a.addClass("opened"),a.css({backgroundImage:"url("+i+")",top:t+"px"})})).on("mouseleave",(function(){a.removeClass("opened")}))}jQuery(document).ready((function(){"use strict";cavani_tm_modalbox(),cavani_tm_page_transition(),cavani_tm_my_progress(),cavani_tm_circular_progress(),cavani_tm_portfolio_popup(),cavani_tm_news_popup(),cavani_tm_service_popup(),cavani_tm_cursor(),cavani_tm_imgtosvg(),cavani_tm_popup(),cavani_tm_portfolio(),cavani_tm_data_images(),cavani_tm_mycarousel(),hashtag(),cavani_tm_ripple(),cavani_tm_moving_box(),jQuery(window).load("body",(function(){cavani_tm_my_load()}))})),$(".glitch").mgGlitch({destroy:!1,glitch:!0,scale:!0,blend:!0,blendModeType:"hue",glitch1TimeMin:200,glitch1TimeMax:400,glitch2TimeMin:10,glitch2TimeMax:100});
+
+function cavani_tm_news_popup() {
+    "use strict";
+    var e = jQuery(".cavani_tm_modalbox"),
+        a = jQuery(".cavani_tm_news .news_list > ul > li .post_title h3 a"),
+        i = e.find(".close");
+    a.on("click", (function() {
+        var a = jQuery(this).closest("li"),
+            i = a.find(".news_hidden_details").html(),
+            t = a.data("img"),
+            n = a.find(".extra_metas").html(),
+            r = a.find(".post_title a").text();
+        return e.addClass("opened"), e.find(".description_wrap").html(i), e.find(".news_popup_informations").prepend('<div class="image"><img src="assets/img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="' + t + '"></div></div>'), e.find(".news_popup_informations .image").after('<div class="details"><div class="meta">' + n + '</div><div class="title"><h3>' + r + "</h3></div><div>"), cavani_tm_data_images(), !1
+    })), i.on("click", (function() {
+        return e.removeClass("opened"), e.find(".description_wrap").html(""), !1
+    }))
+}
+
+
+function cavani_tm_service_popup() {
+    "use strict";
+    var e = jQuery(".cavani_tm_modalbox"),
+        a = jQuery(".cavani_tm_service .service_list ul li .cavani_tm_full_link"),
+        i = e.find(".close");
+    a.on("click", (function() {
+        var a = jQuery(this).closest(".list_inner"),
+            i = a.find(".popup_service_image").attr("src"),
+            t = a.find(".title").html(),
+            n = a.find(".service_hidden_details").html();
+        return e.addClass("opened"), e.find(".description_wrap").html(n), e.find(".service_popup_informations").prepend('<div class="image"><img src="assets/img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="' + i + '"></div></div>'), cavani_tm_data_images(), e.find(".service_popup_informations .image").after('<div class="main_title"><h3>' + t + "</h3></div>"), !1
+    })), i.on("click", (function() {
+        return e.removeClass("opened"), e.find(".description_wrap").html(""), !1
+    }))
+}
+
+
+function cavani_tm_data_images() {
+    "use strict";
+    jQuery("*[data-img-url]").each((function() {
+        var e = jQuery(this),
+            a = e.data("img-url");
+        e.css({
+            backgroundImage: "url(" + a + ")"
+        })
+    }))
+}
+
+
+function cavani_tm_moving_box() {
+
+    "use strict";
+
+    var e = $(".cavani_tm_news").find(".news_list > ul > li");
+    $(".cavani_fn_moving_box").length || $("body").append('<div class="cavani_fn_moving_box"></div>');
+    var a = $(".cavani_fn_moving_box");
+    e.on("mouseenter", (function() {
+        var e = $(this),
+            i = e.data("img"),
+            t = e.offset().top;
+        if ("" === i) return a.removeClass("opened"), !1;
+        a.addClass("opened"), a.css({
+            backgroundImage: "url(" + i + ")",
+            top: t + "px"
+        })
+    })).on("mouseleave", (function() {
+        a.removeClass("opened")
+    }))
+}
+jQuery(document).ready((function() {
+    "use strict";
+    cavani_tm_modalbox(), cavani_tm_page_transition(), cavani_tm_my_progress(), cavani_tm_circular_progress(), cavani_tm_portfolio_popup(), cavani_tm_service_popup(), cavani_tm_cursor(), cavani_tm_imgtosvg(), cavani_tm_popup(), cavani_tm_portfolio(), cavani_tm_data_images(), cavani_tm_mycarousel(), hashtag(), cavani_tm_ripple(), cavani_tm_moving_box(), jQuery(window).load("body", (function() {
+        cavani_tm_my_load()
+    }))
+})), $(".glitch").mgGlitch({
+    destroy: !1,
+    glitch: !0,
+    scale: !0,
+    blend: !0,
+    blendModeType: "hue",
+    glitch1TimeMin: 200,
+    glitch1TimeMax: 400,
+    glitch2TimeMin: 10,
+    glitch2TimeMax: 100
+});

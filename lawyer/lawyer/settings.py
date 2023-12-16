@@ -93,13 +93,13 @@ DATABASES = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-EMAIL_HOST_USER = 'vasilev.ka83@gmail.com'
-EMAIL_HOST_PASSWORD = 'hqvgvloqjlevltaj'
+EMAIL_HOST = 'smtp.timeweb.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = 'vasilev.ka@cn62939-django-016vi.tw1.ru'
+EMAIL_HOST_PASSWORD = 'EsDs7bkG'
 
 
 # Password validation
